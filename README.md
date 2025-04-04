@@ -196,6 +196,7 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 | B1=1 B0=0|          0|          0|        (1)|        (1)|
 
 2. Write down an equation for each cell marked `1`
+3. 
 Disclaimer:These signs (like °°,##,{},...) are only for my visual help, they have no logical sence. 
 
 Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0°
@@ -206,8 +207,10 @@ Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0°
 
 4. Combine them using OR gates
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0) test out of truth table:
-test out of truth table: 
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0) 
+
+testing with truth table: 
+
 |A | B|Q  |
 |--|--|---|
 |00|01|001|
@@ -218,22 +221,31 @@ test out of truth table:
 A1=0 ,A0=0 , B1=0 ,B0=1 ,Q0=1
 
 Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+
 Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄0'˄1')˅(0˄0˄1)
+
 Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
+
 Here is the point of 92 Minutes I had much trouble with the Boolean Equations and with the github editor.
+
 
 A1=0 ,A0=0 , B1=1 ,B0=1 ,Q0=1
 
 Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
 Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄1'˄1')˅(0˄1˄1)
+
 Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
+
 A1=0 ,A0=0 , B1=1 ,B0=0 ,Q0=0
+
 
 Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
 Q0=(0'˄0'˄0)˅(0˄0'˄0)˅(0˄1'˄0')˅(0˄1˄0)
 Q0=(0)˅(0)˅(0)˅(0)=0 (Correct)
+
+
 5. Minimize the equations
 
 <details>
