@@ -106,9 +106,13 @@ for example:
 
 for example:
 23/2= 11 R1
+
 11/2=  5 R1
+
 5/2=   2 R1
+
 2/2=   1 R0
+
 1/2=   0 R1
 
 The resulting bin number is read from bottom to top. (only the number behinfd the R is used)
