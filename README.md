@@ -71,15 +71,52 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 2       | 0010                   |
+| 3       | 0011
+| 4       | 0100
+| 5       | 0101
+| 6       | 0110
+| 7       | 0111
+| 8       | 1000
+| 9       | 1001
+| 10      | 1010
+| 11      | 1011
+| 12      | 1100
+| 13      | 1101
+| 14      | 1110
+| 15      | 1111                   |
 
 **How many binary digits (bits) are needed?**
 
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
+Option 1 (Calculation for number of digits and the resulting bin number) :
+To calculate you have to devide your dec number through 2
+for example: 
+   
+   23/2
+
+ Instead of writing the (Komma Zahl) you devide by the next lower number and write rest 1.
+ for example:
+
+ 23/2= 11 R1
+
+ You do this till you get to Zero.
+
+for example:
+23/2= 11 R1
+11/2=  5 R1
+5/2=   2 R1
+2/2=   1 R0
+1/2=   0 R1
+
+The resulting bin number is read from bottom to top. (only the number behinfd the R is used)
+
+23 dez = 10111
+
+Now you can easy count your digits.
+Number of digits = Number of bits needed.
 </details>
 
 ---
@@ -107,22 +144,65 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
-
----
+A | B|Q
+00|00|000
+00|01|001
+00|10|010
+00|11|011
+01|00|001
+01|01|010
+01|10|011
+01|11|100
+10|00|010
+10|01|011
+10|10|100
+10|11|101
+11|00|011
+11|01|100
+11|10|101
+11|11|111
 
 ### Task 3: Boolean Equations via Karnaugh Maps
 Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5aa370f36e) to derive Boolean equations for each output bit in your 2-bit adder.
 
 1. Fill out Karnaugh Maps
+|  Q0      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|          0|          1|          0|          1|
+| B1=0 B0=1|          1|          0|          1|          0|
+| B1=1 B0=0|          0|          1|          0|          1|
+| B1=1 B0=1|          1|          0|          1|          1|
+
+
+|  Q1      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|          0|          0|          1|          1|
+| B1=0 B0=1|          0|          1|          1|          0|
+| B1=1 B0=0|          1|          1|          0|          0|
+| B1=1 B0=1|          1|          0|          0|          1|
+
+
+|  Q2      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|          0|          0|          0|          0|
+| B1=0 B0=1|          0|          0|          0|          1|
+| B1=1 B0=0|          0|          0|          1|          1|
+| B1=1 B0=1|          0|          1|          1|          1|
+
 2. Write down an equation for each cell marked `1`
+
+
+
+
+
+
 3. Combine them using OR gates
+
+
+
+
+
+
 4. Minimize the equations
 
 <details>
