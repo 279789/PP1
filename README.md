@@ -196,7 +196,7 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 | B1=1 B0=1|          0|          1|          1|          1|
 
 2. Write down an equation for each cell marked `1`
-
+Q0:(B0˄
 
 
 
