@@ -165,51 +165,76 @@ Create a truth table for a **2-bit adder** without carry-in. What are the possib
 |11|00|011|
 |11|01|100|
 |11|10|101|
-|11|11|111|
+|11|11|110|
 
 ### Task 3: Boolean Equations via Karnaugh Maps
 Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5aa370f36e) to derive Boolean equations for each output bit in your 2-bit adder.
 
 1. Fill out Karnaugh Maps
 
-|  Q0      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|  Q0      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
 |----------|-----------|-----------|-----------|-----------|
-| B1=0 B0=0|          0|          1|          0|          1|
-| B1=0 B0=1|          1|          0|          1|          0|
-| B1=1 B0=0|          0|          1|          0|          1|
-| B1=1 B0=1|          1|          0|          1|          1|
+| B1=0 B0=0|          0|        [1]|        [1]|          0|
+| B1=0 B0=1|        {1}|          0|          0|        "1"|
+| B1=1 B0=1|        {1}|          0|          0|        "1"|
+| B1=1 B0=0|          0|        °1°|        °1°|          0|
 
 
-|  Q1      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|  Q1      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
 |----------|-----------|-----------|-----------|-----------|
-| B1=0 B0=0|          0|          0|          1|          1|
-| B1=0 B0=1|          0|          1|          1|          0|
-| B1=1 B0=0|          1|          1|          0|          0|
-| B1=1 B0=1|          1|          0|          0|          1|
+| B1=0 B0=0|          0|          0|        °1°|        #1#|
+| B1=0 B0=1|          0|       {17}|          0|        #1#|
+| B1=1 B0=1|        (1)|          0|        "1"|          0|
+| B1=1 B0=0|        (1)|        [1]|          0|          0|
 
 
-|  Q2      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
+|  Q2      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
 |----------|-----------|-----------|-----------|-----------|
 | B1=0 B0=0|          0|          0|          0|          0|
-| B1=0 B0=1|          0|          0|          0|          1|
-| B1=1 B0=0|          0|          0|          1|          1|
-| B1=1 B0=1|          0|          1|          1|          1|
+| B1=0 B0=1|          0|          0|        {1}|          0|
+| B1=1 B0=1|          0|        [1]|        (1)|        (1)|
+| B1=1 B0=0|          0|          0|        (1)|        (1)|
 
 2. Write down an equation for each cell marked `1`
-Q0:(B0˄
+Disclaimer:These signs (like °°,##,{},...) are only for my visual help, they have no logical sence. 
+
+Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0°
 
 
 
 
 
-3. Combine them using OR gates
+4. Combine them using OR gates
+
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0) test out of truth table:
+test out of truth table: 
+|A | B|Q  |
+|--|--|---|
+|00|01|001|
+|00|11|011|
+|00|10|010|
 
 
+A1=0 ,A0=0 , B1=0 ,B0=1 ,Q0=1
 
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄0'˄1')˅(0˄0˄1)
+Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
+Here is the point of 92 Minutes I had much trouble with the Boolean Equations and with the github editor.
 
+A1=0 ,A0=0 , B1=1 ,B0=1 ,Q0=1
 
-4. Minimize the equations
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄1'˄1')˅(0˄1˄1)
+Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
+
+A1=0 ,A0=0 , B1=1 ,B0=0 ,Q0=0
+
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q0=(0'˄0'˄0)˅(0˄0'˄0)˅(0˄1'˄0')˅(0˄1˄0)
+Q0=(0)˅(0)˅(0)˅(0)=0 (Correct)
+5. Minimize the equations
 
 <details>
 <summary>The final functions</summary>
