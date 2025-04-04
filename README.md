@@ -144,28 +144,30 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
-A | B|Q
-00|00|000
-00|01|001
-00|10|010
-00|11|011
-01|00|001
-01|01|010
-01|10|011
-01|11|100
-10|00|010
-10|01|011
-10|10|100
-10|11|101
-11|00|011
-11|01|100
-11|10|101
-11|11|111
+|A | B|Q  |
+|--|--|---|
+|00|00|000|
+|00|01|001|
+|00|10|010|
+|00|11|011|
+|01|00|001|
+|01|01|010|
+|01|10|011|
+|01|11|100|
+|10|00|010|
+|10|01|011|
+|10|10|100|
+|10|11|101|
+|11|00|011|
+|11|01|100|
+|11|10|101|
+|11|11|111|
 
 ### Task 3: Boolean Equations via Karnaugh Maps
 Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5aa370f36e) to derive Boolean equations for each output bit in your 2-bit adder.
 
 1. Fill out Karnaugh Maps
+
 |  Q0      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=0 | A1=1 A0=1 |
 |----------|-----------|-----------|-----------|-----------|
 | B1=0 B0=0|          0|          1|          0|          1|
