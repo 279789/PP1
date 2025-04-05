@@ -241,7 +241,7 @@ Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄0'˄1')˅(0˄0˄1)
 Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
 
-Here is the point of 92 Minutes I had much trouble with the Boolean Equations and with the github editor.
+####Here is the point of 90 Minutes I had much trouble with the github editor and with the Boolean Equations.
 
 
 A1=0 ,A0=0 , B1=1 ,B0=1 ,Q0=1
@@ -333,14 +333,56 @@ Q2=(0)˅(0)˅(0)=0 (correct)
 
 ## 5. Minimize the equations
 
+Here is the point, where I finaly realised that large groups of numbers in the k-map means less work, I think that there is also no problem with putting several numbers in more than group.
+
+
+
+
+
+
+
+
+
+
+
+---
+|  Q1      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|          0|          0|        °1°|      °#1#°|
+| B1=0 B0=1|          0|       {17}|          0|        #1#|
+| B1=1 B0=1|        (1)|          0|        "1"|          0|
+| B1=1 B0=0|      [(1)]|        [1]|          0|          0|
+
+Original Q1: Q1=(A1'˄A0'˄B0),{A1'˄A0˄B1'˄B0},[A1'˄A0˄B1˄B0'],°A1˄A0˄B1'˄B0'°,"A1˄A0˄B1˄B0",#A1˄A0'˄B1'#
+
+Shortend Q1: Q1=(A1'˄A0'˄B0),{A1'˄A0˄B1'˄B0},[A1'˄B1˄B0'],°A1˄B1'˄B0'°,"A1˄A0˄B1˄B0",#A1˄A0'˄B1'#
+
+Q1=(A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(1'˄B1˄B0')˅(A1˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
+
+
+---
+|  Q2      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|     ress    0|          0|          0|          0|
+| B1=0 B0=1|          0|          0|        {1}|          0|
+| B1=1 B0=1|          0|        [1]|    {[(1)]}|        (1)|
+| B1=1 B0=0|          0|          0|        (1)|        (1)|
+
+Original Q2=[A1'˄A0˄B1˄B0],{A1˄A0˄B1'˄B0},(A1˄B1)
+
+Shorted Q2=[A0˄B1˄B0],{A1˄A0˄B0},(A1˄B1)
+
+Q2=(A0˄B1˄B0)˅(A1˄A0˄B0)˅(A1˄B1)
+
+---
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = (A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = (A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(1'˄B1˄B0')˅(A1˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = (A0˄B1˄B0)˅(A1˄A0˄B0)˅(A1˄B1)
 
 </details>
 
