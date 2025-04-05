@@ -1,4 +1,4 @@
-# PP1 Phil Reinartz Test
+# PP1 Phil Reinartz
 
 ## Goal
 All PPn practical exercises share a common purpose: to help you demonstrate—step by step—that you followed and understood the content presented in the weekly lectures. This ongoing feedback loop allows me, as your lecturer, to monitor your personal progress.
