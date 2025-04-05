@@ -222,7 +222,7 @@ Q1=(A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(A1'˄A0˄B1˄B0')˅(A1˄A0˄B1'˄B0')˅(
 
 ---
 
-##testing with truth table (Q0): 
+## testing with truth table (Q0): 
 
 |A | B|Q  |
 |--|--|---|
@@ -262,7 +262,7 @@ Q0=(0)˅(0)˅(0)˅(0)=0 (Correct)
 
 ---
 
-##testing with truth table (Q1): 
+## testing with truth table (Q1): 
 
 |A | B|Q  |
 |--|--|---|
@@ -296,7 +296,7 @@ Q1=(0)˅(0)˅(0)˅(0)˅(1)˅(0)=1 (correct)
 
 ---
 
-##5. Minimize the equations
+## 5. Minimize the equations
 
 <details>
 <summary>The final functions</summary>
