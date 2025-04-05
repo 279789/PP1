@@ -216,7 +216,7 @@ Q2=[A1'˄A0˄B1˄B0],{A1˄A0˄B1'˄B0},(A1˄B1)
 ---
 4. Combine them using OR gates
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0) 
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0) 
 
 Q1=(A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(A1'˄A0˄B1˄B0')˅(A1˄A0˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
@@ -378,7 +378,7 @@ Q2=(A0˄B1˄B0)˅(A1˄A0˄B0)˅(A1˄B1)
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = (A1'˄A0'˄B0)˅(A1˄A0'˄B')˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q<sub>0</sub> = (A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
 
 Q<sub>1</sub> = (A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(1'˄B1˄B0')˅(A1˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
