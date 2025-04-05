@@ -398,7 +398,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href="[]">https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330</a>
+A share link to your solution goes here: https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330 <a href="[]">https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330</a>
 </details>
 
 ---
