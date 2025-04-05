@@ -205,7 +205,7 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
  
 ### Disclaimer:These signs (like °°,##,{},...) are only for my visual help, they have no logical sence. 
 
-Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0°
+Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0'°
 
 
 Q1=(A1'˄A0'˄B0),{A1'˄A0˄B1'˄B0},[A1'˄A0˄B1˄B0'],°A1˄A0˄B1'˄B0'°,"A1˄A0˄B1˄B0",#A1˄A0'˄B1'#
@@ -216,7 +216,7 @@ Q2=[A1'˄A0˄B1˄B0],{A1˄A0˄B1'˄B0},(A1˄B1)
 ---
 4. Combine them using OR gates
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0) 
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0') 
 
 Q1=(A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(A1'˄A0˄B1˄B0')˅(A1˄A0˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
@@ -234,20 +234,20 @@ Q2=(A1'˄A0˄B1˄B0)˅(A1˄A0˄B1'˄B0)˅(A1˄B1)
 
 A1=0 ,A0=0 , B1=0 ,B0=1 ,Q0=1
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0')
 
-Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄0'˄1')˅(0˄0˄1)
+Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄0'˄1')˅(0˄0˄1')
 
 Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
 
-####Here is the point of 90 Minutes I had much trouble with the github editor and with the Boolean Equations.
+#### Here is the point of 90 Minutes I had much trouble with the github editor and with the Boolean Equations.
 
 
 A1=0 ,A0=0 , B1=1 ,B0=1 ,Q0=1
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
-Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄1'˄1')˅(0˄1˄1)
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0')
+Q0=(0'˄0'˄1)˅(0˄0'˄1)˅(0˄1'˄1')˅(0˄1˄1')
 
 Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 
@@ -255,9 +255,9 @@ Q0=(1)˅(0)˅(0)˅(0)=1 (Correct)
 A1=0 ,A0=0 , B1=1 ,B0=0 ,Q0=0
 
 
-Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0')
 
-Q0=(0'˄0'˄0)˅(0˄0'˄0)˅(0˄1'˄0')˅(0˄1˄0)
+Q0=(0'˄0'˄0)˅(0˄0'˄0)˅(0˄1'˄0')˅(0˄1˄0')
 
 Q0=(0)˅(0)˅(0)˅(0)=0 (Correct)
 
@@ -333,17 +333,21 @@ Q2=(0)˅(0)˅(0)=0 (correct)
 
 ## 5. Minimize the equations
 
-Here is the point, where I finaly realised that large groups of numbers in the k-map means less work, I think that there is also no problem with putting several numbers in more than group.
+Here is the point, where I finaly realised that large groups of numbers in the k-map means less work, I think that there is also no problem with putting several numbers in more than group.I also realised, that it's posible to build number groups over the left and right table boarder (Q0). The group sizes have to be 1, 2, 4 ,8 ,...
 
+---
+|  Q0      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
+|----------|-----------|-----------|-----------|-----------|
+| B1=0 B0=0|          0|        [1]|        [1]|          0|
+| B1=0 B0=1|        {1}|          0|          0|        {1}|
+| B1=1 B0=1|        {1}|          0|          0|        {1}|
+| B1=1 B0=0|          0|        [1]|        [1]|          0|
 
+Original Q0: Q0= {A1'˄A0'˄B0},"A1˄A0'˄B0",[A0˄B1'˄B0'],°A0˄B1˄B0'°
 
+Shortend Q0: Q0= {A0'˄B0},[A0˄B0']
 
-
-
-
-
-
-
+Q0=(A0'˄B0)˅(A0˄B0')
 
 ---
 |  Q1      | A1=0 A0=0 | A1=0 A0=1 | A1=1 A0=1 | A1=1 A0=0 |
@@ -378,7 +382,7 @@ Q2=(A0˄B1˄B0)˅(A1˄A0˄B0)˅(A1˄B1)
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = (A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0)
+Q<sub>0</sub> =(A0'˄B0)˅(A0˄B0')
 
 Q<sub>1</sub> = (A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(1'˄B1˄B0')˅(A1˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
@@ -393,7 +397,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here: <a href="[(https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330)]">Link!</a>
 </details>
 
 ---
