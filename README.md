@@ -221,6 +221,7 @@ Q0=(A1'˄A0'˄B0)˅(A1˄A0'˄B0)˅(A0˄B1'˄B0')˅(A0˄B1˄B0')
 Q1=(A1'˄A0'˄B0)˅(A1'˄A0˄B1'˄B0)˅(A1'˄A0˄B1˄B0')˅(A1˄A0˄B1'˄B0')˅(A1˄A0˄B1˄B0)˅(A1˄A0'˄B1')
 
 Q2=(A1'˄A0˄B1˄B0)˅(A1˄A0˄B1'˄B0)˅(A1˄B1)
+
 ---
 
 #### testing with truth table (Q0): 
@@ -397,7 +398,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href="[(https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330)]">Link!</a>
+A share link to your solution goes here: <a href="[----------------------------]">(https://circuitverse.org/simulator/edit/q0-9d8c804c-0526-4ecc-9ef4-97f5f9b79330)</a>
 </details>
 
 ---
